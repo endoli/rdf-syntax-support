@@ -1,0 +1,78 @@
+@base <http://example.org/> .
+@base <http://example.org/> . # With a comment
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> . # Comment?
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix : <http://example.com/> .
+BASE <http://another.example.org/>
+BASE <http://another.example.org/> # Comment!
+PREFIX p: <http://two.example/>
+
+
+
+@base         : keyword.control.base.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://example.org/> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+@base         : keyword.control.base.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://example.org/> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+              : text.rdf.turtle
+#             : comment.line.rdf.turtle, punctuation.definition.comment.rdf.turtle, text.rdf.turtle
+ With a comment : comment.line.rdf.turtle, text.rdf.turtle
+@prefix       : keyword.control.prefix.turtle, text.rdf.turtle
+              : text.rdf.turtle
+rdf:          : constant.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+@prefix       : keyword.control.prefix.turtle, text.rdf.turtle
+              : text.rdf.turtle
+rdfs:         : constant.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://www.w3.org/2000/01/rdf-schema#> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+@prefix       : keyword.control.prefix.turtle, text.rdf.turtle
+              : text.rdf.turtle
+foaf:         : constant.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://xmlns.com/foaf/0.1/> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+              : text.rdf.turtle
+#             : comment.line.rdf.turtle, punctuation.definition.comment.rdf.turtle, text.rdf.turtle
+ Comment?     : comment.line.rdf.turtle, text.rdf.turtle
+@prefix       : keyword.control.prefix.turtle, text.rdf.turtle
+              : text.rdf.turtle
+rel:          : constant.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://www.perceive.net/schemas/relationship/> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+@prefix       : keyword.control.prefix.turtle, text.rdf.turtle
+              : text.rdf.turtle
+:             : constant.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://example.com/> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+.             : punctuation.end.turtle, text.rdf.turtle
+BASE          : keyword.control.base.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://another.example.org/> : string.uri.turtle, text.rdf.turtle
+BASE          : keyword.control.base.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://another.example.org/> : string.uri.turtle, text.rdf.turtle
+              : text.rdf.turtle
+#             : comment.line.rdf.turtle, punctuation.definition.comment.rdf.turtle, text.rdf.turtle
+ Comment!     : comment.line.rdf.turtle, text.rdf.turtle
+PREFIX        : keyword.control.prefix.turtle, text.rdf.turtle
+              : text.rdf.turtle
+p:            : constant.turtle, text.rdf.turtle
+              : text.rdf.turtle
+<http://two.example/> : string.uri.turtle, text.rdf.turtle

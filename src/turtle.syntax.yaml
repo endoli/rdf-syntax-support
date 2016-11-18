@@ -1,0 +1,67 @@
+---
+name: rdf-turtle
+scopeName: text.rdf.turtle
+fileTypes: [ttl]
+
+# [1] turtleDoc ::= statement*
+patterns:
+  - include: '#statement'
+  - include: '#comment'
+
+repository:
+  comment:
+    patterns:
+      - include: '#line-comment'
+
+  line-comment:
+    name: comment.line.rdf.turtle
+    begin: (#)
+    end: $
+    beginCaptures:
+      '1': {name: punctuation.definition.comment.rdf.turtle}
+
+  statement:
+    comment: "[2] statement ::= directive | triples '.'"
+    patterns:
+      - include: '#directive'
+      - include: '#triples'
+
+  directive:
+    comment: "[3] directive ::= prefixID | base | sparqlPrefix | sparqlBase"
+    patterns:
+      - include: '#prefix_directive'
+      - include: '#base_directive'
+      - include: '#sparql_prefix_directive'
+      - include: '#sparql_base_directive'
+
+  prefix_directive:
+    comment: "[4] prefixID  ::= '@prefix' PNAME_NS IRIREF '.'"
+    match: (@prefix) (\w*:) (<[^<>"{}|^`\]|\\]*>) (\.)
+    captures:
+      '1': {name: keyword.control.prefix.turtle}
+      '2': {name: constant.turtle}
+      '3': {name: string.uri.turtle}
+      '4': {name: punctuation.end.turtle}
+
+  base_directive:
+    comment: "[5] base  ::= '@base' IRIREF '.'"
+    match: (@base) (<[^<>"{}|^`\]|\\]*>) (\.)
+    captures:
+      '1': {name: keyword.control.base.turtle}
+      '2': {name: string.uri.turtle}
+      '3': {name: punctuation.end.turtle}
+
+  sparql_base_directive:
+    comment: '[5s]  sparqlBase  ::= "BASE" IRIREF'
+    match: (BASE) (<[^<>"{}|^`\]|\\]*>)
+    captures:
+      '1': {name: keyword.control.base.turtle}
+      '2': {name: string.uri.turtle}
+
+  sparql_prefix_directive:
+    comment: '[6s]  sparqlPrefix  ::= "PREFIX" PNAME_NS IRIREF'
+    match: (PREFIX) (\w*:) (<[^<>"{}|^`\]|\\]*>)
+    captures:
+      '1': {name: keyword.control.prefix.turtle}
+      '2': {name: constant.turtle}
+      '3': {name: string.uri.turtle}

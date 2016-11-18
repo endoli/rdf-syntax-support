@@ -1,0 +1,4 @@
+generated/*.cson
+generated/*.tmLanguage
+generated/*.scopes
+node_modules

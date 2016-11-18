@@ -1,0 +1,31 @@
+{
+  "name": "rdf-syntax-support",
+  "version": "0.1.0",
+  "description": "RDF syntax file generation",
+  "scripts": {
+    "build": "npm run build-turtle",
+    "build-turtle": "npm run build-turtle-plist && npm run build-turtle-cson && npm run build-turtle-scopes",
+    "build-turtle-plist": "syntaxdev build-plist --in src/turtle.syntax.yaml --out generated/turtle.tmLanguage",
+    "build-turtle-cson": "syntaxdev build-cson --in src/turtle.syntax.yaml --out generated/turtle.cson",
+    "build-turtle-scopes": "syntaxdev scopes --syntax src/turtle.syntax.yaml > generated/turtle.scopes",
+    "test": "npm run test-turtle",
+    "test-turtle": "syntaxdev test --tests tests/**/*.ttl --syntax src/turtle.syntax.yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endoli/rdf-syntax-support.git"
+  },
+  "keywords": [
+    "Syntax",
+    "RDF"
+  ],
+  "author": "Bruce Mitchener, Jr.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/endoli/rdf-syntax-support/issues"
+  },
+  "homepage": "https://github.com/endoli/rdf-syntax-support#readme",
+  "devDependencies": {
+    "syntaxdev": "0.0.11"
+  }
+}
