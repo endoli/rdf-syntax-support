@@ -1,5 +1,7 @@
 # rdf-syntax-support
 
+[![Build Status](https://travis-ci.org/endoli/rdf-syntax-support.svg?branch=master)](https://travis-ci.org/endoli/rdf-syntax-support)
+
 This repository stores source files, build infrastructure,
 and tests for syntax definitions for various formats used
 for RDF data.
