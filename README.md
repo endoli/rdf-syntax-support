@@ -12,6 +12,10 @@ by:
 * [Sublime Text](http://www.sublimetext.com/)
 * [Textmate](https://macromates.com/)
 
+Currently, we are working on support for Turtle syntax, but plan
+to add support for N3, TriG, N-Triples, N-Quads, and probably
+additional formats.
+
 ## Building
 
 First, install ``syntaxdev`` and any other required packages
@@ -32,6 +36,7 @@ Or to run the tests:
 Many things are still missing and there's a lot to do! Feel
 free to dig in!
 
+* File an issue first to discuss what you'd like to do.
 * Add your name to the `CONTRIBUTORS.rst` file.
 * Make sure you add tests for your changes.
 * Submit a clean pull request (no merge commits, no extra
