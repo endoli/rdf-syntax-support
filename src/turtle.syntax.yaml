@@ -14,11 +14,11 @@ repository:
       - include: '#line-comment'
 
   line-comment:
-    name: comment.line.rdf.turtle
+    name: comment.line.number-sign.turtle
     begin: (#)
     end: $
     beginCaptures:
-      '1': {name: punctuation.definition.comment.rdf.turtle}
+      '1': {name: punctuation.definition.comment.turtle}
 
   statement:
     comment: "[2] statement ::= directive | triples '.'"

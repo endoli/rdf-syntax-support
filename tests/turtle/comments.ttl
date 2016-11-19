@@ -4,7 +4,7 @@
 
 
 
-#             : comment.line.rdf.turtle, punctuation.definition.comment.rdf.turtle, text.rdf.turtle
- A comment    : comment.line.rdf.turtle, text.rdf.turtle
-#             : comment.line.rdf.turtle, punctuation.definition.comment.rdf.turtle, text.rdf.turtle
- A comment with # another comment. : comment.line.rdf.turtle, text.rdf.turtle
+#             : comment.line.number-sign.turtle, punctuation.definition.comment.turtle, text.rdf.turtle
+ A comment    : comment.line.number-sign.turtle, text.rdf.turtle
+#             : comment.line.number-sign.turtle, punctuation.definition.comment.turtle, text.rdf.turtle
+ A comment with # another comment. : comment.line.number-sign.turtle, text.rdf.turtle
